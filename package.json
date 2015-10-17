@@ -1,11 +1,14 @@
 {
   "name": "starter-node-angular",
-  "main": "server.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "version": "1.0.1",
   "dependencies": {
-    "express" : "~4.5.1",
-	"mongoose" : "~3.8.0",
-	"body-parser" : "~1.4.2",
-	"method-override" : "~2.0.2"
+    "body-parser": "~1.4.2",
+    "express": "~4.5.1",
+    "github-api": "^0.10.6",
+    "method-override": "~2.0.2",
+    "mongoose": "~3.8.0"
   }
 }
