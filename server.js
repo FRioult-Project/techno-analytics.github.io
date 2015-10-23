@@ -3,7 +3,6 @@ var express        = require('express');
 var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
-var Technos = require('./domain_layer/models/TechnosViews');
 // configuration ===========================================
 // config files
 var db = require('./config/db');
@@ -26,17 +25,10 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 // routes ==================================================
-require('./app_layer/routes/routes')(app); // pass our application into our routes
+require('./app/routes/routes')(app); // pass our application into our routes
 
-//test github api and persistance
-var git = require('./app_layer/gateways/githubGateway');
-git.getInfos().then(function(i){
-    Technos.create(i, function (err, post) {
-        if (err) console.log(err);
-       console.log(post);
-    },function(e){
-        console.log(e);
-    });
+//get data via github api and persist data
+var git = require('./app/gateways/githubGateway');
+git.getInfos();
 
-})
-exports = module.exports = app; 						// expose app
+exports = module.exports = app;// expose app
