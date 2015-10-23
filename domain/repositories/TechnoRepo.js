@@ -37,6 +37,18 @@ module.exports = {
             })
         });
     },
+    getServerSideTechno : function(name) {
+        return new Promise(function (resolve, reject) {
+            Technos.find({'name':name},{'_id':0}, function (err, technoDetails) {
+                if (err) {
+                    reject(err);
+                }
+                resolve(technoDetails);
+            })
+        });
+    },
+
+
     createOrUpdateTechno: function(techno) {
         return new Promise(function (resolve, reject) {
             Technos.update({id: techno.id}, techno, {upsert: true}, function (err,technosUpdated) {

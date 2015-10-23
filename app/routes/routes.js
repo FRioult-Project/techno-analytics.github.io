@@ -19,6 +19,13 @@ module.exports = function(app) {
         })
     });
 
+    //Techno infos route
+    app.get('/api/technos/Node.js/:name', function(req, res) {
+        TechnoService.getServerSideTechno(req.params.name).then(function(Techno){
+            res.json(Techno);
+        })
+    });
+
     //commits technos infos route
     app.get('/api/commits', function(req, res) {
         CommitService.getAllCommits().then(function(Technos){
