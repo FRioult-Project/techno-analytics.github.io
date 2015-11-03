@@ -1,0 +1,60 @@
+<span class="wrapper">
+    <span class="block" style="width: 50px"></span>
+    <span class="block">
+        <div class="row">
+
+            <div class="12u chart-wrapper">
+                <div class="chart-title">  <strong> Stars count </strong> </div>
+        <nvd3-pie-chart
+            data="pieData"
+            id="p1"
+            margin="{left:0,top:0,bottom:0,right:0}"
+            x="xFunction()"
+            y="yFunction()"
+            showLabels="true"
+            pieLabelsOutside="false"
+            showLegend="true"
+            labelType="value">
+        <svg height="300"></svg>
+    </nvd3-pie-chart></div></div>
+    </span>
+    <span class="block" style="width: 40px"></span>
+    <span class="block">
+        <div class="row">
+
+            <div class="12u chart-wrapper">
+                <div class="chart-title">  <strong> Forks count </strong> </div>
+                <nvd3-pie-chart
+                        data="pieData"
+                        id="p2"
+                        margin="{left:0,top:0,bottom:0,right:0}"
+                        x="xFunction()"
+                        y="y2Function()"
+                        showLabels="true"
+                        pieLabelsOutside="false"
+                        showLegend="true"
+                        labelType="value">
+                    <svg height="300"></svg>
+                </nvd3-pie-chart></div>
+
+        </div>
+       </span>
+    <span class="block" style="width: 40px"></span>
+    <span class="block">
+        <div class="row">
+
+            <div class="12u chart-wrapper">
+                <div class="chart-title">  <strong> Watchers count </strong> </div>
+        <nvd3-pie-chart
+            data="pieData"
+            id="p3"
+            margin="{left:0,top:0,bottom:0,right:0}"
+            x="xFunction()"
+            y="y3Function()"
+            showLabels="true"
+            pieLabelsOutside="false"
+            showLegend="true"
+            labelType="value">
+        <svg height="300"></svg>
+    </nvd3-pie-chart></div></div></span>
+</span>

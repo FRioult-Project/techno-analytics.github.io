@@ -1,0 +1,18 @@
+{
+  "name" : "JS Technos : MVC Frameworks",
+  "type": "black",
+  "level": "red",
+  "children" : [
+    {"name" : "Client side"
+    },
+    {
+      "name" : "Server side",
+      "children" : [
+        {"name" : "Sinatra-like"
+        },
+        {"name" : "Rails-like"
+        }
+      ]
+    }
+  ]
+}

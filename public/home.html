@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/style_tree.css" />
+<div id="body" >
+
+    <div id="toolTip" class="tooltip" style="opacity:0;">
+        <div id="head" class="head"></div>
+        <div id="header1" class="header1"></div>
+        <div id="header2" class="header2"></div>
+        <div style="position:absolute; left:10px">
+            <div id="federalTip" class="tip" style="width:80px; left:0px; top:10px; position: absolute;">
+                <div class="header3"><br>Stars</div>
+                <div class="header-rule"></div>
+                <div id="fedSpend" class="header4"></div>
+            </div>
+            <div id="stateTip" class="tip" style="width:80px; left:92px; top:10px; position: absolute;">
+                <div class="header3"><br>Forks</div>
+                <div class="header-rule"></div>
+                <div id="stateSpend" class="header4"></div>
+            </div>
+            <div id="localTip" class="tip" style="width:80px; left:184px; top:10px; position: absolute;">
+                <div class="header3"><br>Watchers</div>
+                <div class="header-rule"></div>
+                <div id="localSpend" class="header4"></div>
+            </div>
+        </div>
+        <div class="tooltipTail"></div>
+    </div>
+
+</div>
+<div ui-view></div>

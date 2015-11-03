@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="css/stylenew.css" />
+
+			<div id="page" style="margin-top:-61px;margin-left: 60px">
+
+				<div id="charts">
+
+					<div class="row">
+
+						<div layout="row" layout-align="end" ng-click="prev()" style="margin-left: 50px">
+							<md-button md-no-ink type="submit " class="md-raised md-primary"><span> << Home</span></md-button>
+						</div>
+						</div>
+
+
+					</div>
+
+					<div class="row">
+
+					<div class="4u dc-data-count dc-chart" id="row-selection">
+						<span class="filter-count">_</span> selected out of <span class="total-count">_</span> records |
+						<span>
+							<a href='javascript:dc.filterAll();dc.redrawAll();'><font color="#33CC99">Reset All</font></a>
+						</span>
+					</div>
+
+
+				</div>
+
+					<div class="row">
+
+						<div class="10u chart-wrapper"  id="visualisation">
+							<div class="chart-title" style="margin-left: 40px">  <strong>Commits count for {{frm!=""? "'"+frm+"'" :techno}} </strong> </div>
+						</div>
+
+					</div>
+					<div class="row">
+
+						<div class="10u chart-wrapper"  id="vis">
+							<div class="chart-title" style="margin-left: 40px">  <strong> Contributors for {{frm!=""? "'"+frm+"'" :techno}}  </strong> </div>
+						</div>
+
+					</div>
+
+
+
+				</div>
+			</div>
+
+			
+		</div>

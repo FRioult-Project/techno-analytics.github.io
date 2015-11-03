@@ -1,6 +1,7 @@
 var TechnoService = require('../../domain/services/TechnoService');
 var CommitService = require('../../domain/services/CommitService');
 var IssueService = require('../../domain/services/IssueService');
+var contrsService = require('../../domain/services/ContributorsService');
 module.exports = function(app) {
 
     // server routes ===========================================================
@@ -26,6 +27,13 @@ module.exports = function(app) {
         })
     });
 
+    //Techno infos route
+    app.get('/api/contrs/Node.js/:name', function(req, res) {
+        contrsService.getAllCommitsByName(req.params.name).then(function(Techno){
+            res.json(Techno);
+        })
+    });
+
     //commits technos infos route
     app.get('/api/commits', function(req, res) {
         CommitService.getAllCommits().then(function(Technos){
@@ -36,6 +44,27 @@ module.exports = function(app) {
     //commits by techno infos route
     app.get('/api/commits/:techno', function(req, res) {
         CommitService.getCommitsByTechno(req.params.techno).then(function(commits){
+            res.json(commits);
+        })
+    });
+
+    //contrs technos infos route
+    app.get('/api/contrs', function(req, res) {
+        contrsService.getAllCommits().then(function(Technos){
+            res.json(Technos);
+        })
+    });
+
+    //contrs by techno infos route
+    app.get('/api/contrs/:techno', function(req, res) {
+        contrsService.getCommitsByTechno(req.params.techno).then(function(commits){
+            res.json(commits);
+        })
+    });
+
+    //contrs by techno infos route
+    app.get('/api/contrs/commits/:techno', function(req, res) {
+        contrsService.getAllCommitsByTechno(req.params.techno).then(function(commits){
             res.json(commits);
         })
     });
